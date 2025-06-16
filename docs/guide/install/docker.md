@@ -25,7 +25,7 @@ Note: The official OpenList Docker image has not yet been released. The Docker i
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" ghcr.io/openlistteam/openlist:latest
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:bata
 ```
 
 #### **docker compose**
@@ -34,7 +34,7 @@ docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 52
 version: '3.3'
 services:
   openlist:
-    image: 'ghcr.io/openlistteam/openlist:beta'
+    image: 'openlistteam/openlist:beta'
     container_name: openlist
     volumes:
       - '/etc/openlist:/opt/openlist/data'
@@ -59,7 +59,7 @@ services:
 
 #### **Image Versions**
 
-Stable version: `ghcr.io/openlistteam/openlist:latest` or specify beta version, such as `ghcr.io/openlistteam/openlist:beta` (latest is not online)
+Stable version: `openlistteam/openlist:latest` or specify beta version, such as `openlistteam/openlist:beta` (latest is not online)
 
 Latest image version, please refer to https://hub.docker.com/r/openlistteam/openlist/tags
 
@@ -73,7 +73,7 @@ Pre-installed environment image suffix:
 | `ffmpeg` | Pre-installed FFmpeg image for generating thumbnail for local storage   |
 | `aria2`  | Pre-installed aria2 image for offline downloading.                      |
 
-You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:beta-aria2` `openlistteam/openlist:v3.40.0-ffmpeg`
+You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:latest-aria2` `openlistteam/openlist:latest-ffmpeg`(latest is not online)
 
 If the thumbnail generation function still does not work when using the pre-installed ffmpeg, please confirm:
 
@@ -114,7 +114,7 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 1. docker ps -a #View the container (find the ID of the Alist container)
 2. docker stop ID #Stop Alist running, otherwise it cannot be deleted (this time the ID of the Alist container is d429749a6e69, it is different for each installation)
 3. docker rm ID #Delete the Alist container (the data is still there as long as you don't delete it manually)
-4. docker pull openlistteam/openlist:latest
+4. docker pull openlistteam/openlist:beta
 5. [Enter the installation command and click to view](#docker-cli)
 6. The update is complete, go and have a look.. It's that simple
 
@@ -129,12 +129,12 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 
 :::
 
-Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull ghcr.io/openlistteam/openlist:latest` does not work to pull the latest version. After changing to docker-compose, it is still version 3.x.x
+Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull openlistteam/openlist:latest` does not work to pull the latest version. After changing to docker-compose, it is still version 3.x.x
 
 A: The reason is that your docker has set up a mirror, and the latest version cannot be updated from the mirror, so modify /etc/docker/daemon.json and delete "registry-mirrors": ["mirror accelerator address"]
 
 - If deletion doesn’t work, you can consider replacing it with a `mirror acceleration address`
-- Or simple and rude: when downloading, replace `ghcr.io/openlistteam/openlist:latest` with `ghcr.io/openlistteam/openlist:v3.16.3` (specify the version, the latest when writing the tutorial is 3.16.3)
+- Or simple and rude: when downloading, replace `openlistteam/openlist:latest` with `openlistteam/openlist:v4.0.0` (specify the version, the latest when writing the tutorial is 4.0.0)
 
 ### **Compile Image**
 
@@ -145,13 +145,13 @@ Install Docker, clone the repository, then navigate to the root directory of the
 @tab basic
 
 ```bash
-docker build -t ghcr.io/openlistteam/openlist:latest .
+docker build -t openlistteam/openlist:beta .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t ghcr.io/openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t openlistteam/openlist:beta-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::
