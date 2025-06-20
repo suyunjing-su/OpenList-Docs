@@ -85,7 +85,7 @@ Move the cursor to **after the parentheses** and press Enter.
 
 The webpage will automatically redirect to the mobile number verification page.
 
-After completing the verification, the page **will not** refresh automatically. Please check the console. The `creditkey` shown below is the required password.
+After completing the verification, the page **will not** refresh automatically. Please check the console. The `creditkey` shown below is the required key.
 
 ![Console Output](/img/drivers/xunlei/output.png)
 
