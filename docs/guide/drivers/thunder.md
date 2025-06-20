@@ -65,22 +65,33 @@ password for login
 
 
 
-### **CaptchaToken**
+### **Credit Key**
 
-Need verify: {url} may appear when logging in or uploading, please visit the link in the error to complete the verification and get CaptchaToken (verification code)
+After saving for the first time, an error will occur. This is normal. Please go to the storage management interface.
 
-![xunlei](/img/drivers/xunlei/x1.png)
+![Storage Error Interface](/img/drivers/xunlei/storage_error.png)
 
-Fill in the mount directory ID account password and save it, there will be a big lump in the upper right corner (cannot be copied),
+Copy all the content above.
 
-Let's go back to adding an account to copy from Https to the end to a new window to get the verification code parameter (CaptchaToken)
+[Click here to enter](https://i.xunlei.com/xlcaptcha/android.html)
 
-See the image below to add
+After entering, open the developer tools (usually by pressing F12), go to the console, and enter `reviewCb()`. **Paste all the previously copied content, including the curly braces,** inside the parentheses, as shown below:
 
-![xunlei](/img/drivers/xunlei/x2.png)
+![Console Input](/img/drivers/xunlei/input.png)
+
+Move the cursor to **after the parentheses** and press Enter.
+
+![SMS Verification](/img/drivers/xunlei/SMS.png)
+
+The webpage will automatically redirect to the mobile number verification page.
+
+After completing the verification, the page **will not** refresh automatically. Please check the console. The `creditkey` shown below is the required password.
+
+![Console Output](/img/drivers/xunlei/output.png)
+
+Copy it to the storage management, and you can mount it normally.
 
 <br/>
-
 
 
 ### **The default download method used**

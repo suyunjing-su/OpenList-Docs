@@ -67,21 +67,31 @@ star: true
 
 <br/>
 
+### **信用密钥**
 
+在第一次保存后会产生报错，这是正常的，请存储管理界面
 
-### **CaptchaToken**
+![存储报错界面](/img/drivers/xunlei/storage_error.png)
 
-在登录或上传是可能出现 need verify: {url},请访问错误中的链接完成验证得到 CaptchaToken（验证码）
+复制以上所有内容
 
-![xunlei](/img/drivers/xunlei/x1.png)
+[点我进入](https://i.xunlei.com/xlcaptcha/android.html)
 
-填写好挂载目录 ID 账号 密码后保存，右上角会出现一大坨(没法复制)，
+进入之后，打开开发者界面（一般来说按F12），进入控制台，输入`reviewCb()`,在括号间**全部粘贴包括大括号**在内的之前所有复制内容，如下图所示
 
-我们回到添加账号这里来复制 从 Https 开始复制到结束到一个新窗口进行获取验证码参数(CaptchaToken)
+![控制台输入](/img/drivers/xunlei/input.png)
 
-看下图添加
+将光标移动至**括号后面**再按回车。
 
-![xunlei](/img/drivers/xunlei/x2.png)
+![短信验证](/img/drivers/xunlei/SMS.png)
+
+网页会自动转至手机号验证界面，
+
+完成验证后，网页**不会**自动刷新，请在控制台中检查，如下图所示的`creditkey`就是需要的密码。
+
+![控制台输出](/img/drivers/xunlei/output.png)
+
+将其复制到存储管理后即可正常挂载
 
 <br/>
 
