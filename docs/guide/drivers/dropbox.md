@@ -28,7 +28,7 @@ Dropbox Official：https://www.dropbox.com/
 - The steps are as follows:
   - If you create your own `Client ID` and `Secret`, remember to authorize them.
   - First, [click here](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps) to enter the Dropbox app management page and click "Create App".
-  ![Enter the page](/img/drivers/dropbox/2.png)
+  ![Enter the page](/img/drivers/dropbox/1.png)
   - After entering the app, configure the app type as shown below.
   ![App type](/img/drivers/dropbox/2.png)
   - You can get the id and secret in the red box: the upper one is the id, the lower one is the secret.

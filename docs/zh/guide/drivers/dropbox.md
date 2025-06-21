@@ -27,7 +27,7 @@ Dropbox官网：https://www.dropbox.com/
   - 获取方式如下
   - 自建`客户端ID`和`秘钥`时，记得授权
   - 首先[点击这里](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps)进入dropbox的应用管理界面，点击创建应用
-  ![进入界面](/img/drivers/dropbox/2.png)
+  ![进入界面](/img/drivers/dropbox/1.png)
   - 进入应用后按下图配置应用类型
   ![应用类型](/img/drivers/dropbox/2.png)
   - 在红框里可以获得id和secret，上面是id，下面是secret。
