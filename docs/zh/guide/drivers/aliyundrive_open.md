@@ -47,7 +47,7 @@ typeof fetch !== "undefined" && getLimit()
 
 2. OpenList 挂载时填写的 token 也应该是这个工具提供的，之前方式获取的不可以
 
-3. 暂不适用于其他，同时也仅限用于 Alist 使用
+3. 暂不适用于其他，同时也仅限用于 OpenList 使用
 
 4. 同一 IP 在 =={{ minutes }}== 分钟内请求 =={{ max }}== 次，会出现 **Too Many Requests** :no_entry_sign:避免滥用，请勿滥用:no_entry_sign:
    - 查看文件看视频下载不算，上述的分钟和次数是动态的
@@ -81,7 +81,7 @@ typeof fetch !== "undefined" && getLimit()
 
 3. 如果你使用的是 `OpenList （或者公益服务器/自建服务器）`内置的密钥对（即：自身没有阿里云盘开放平台的应用信息），请按照`3.1`、`3.2`和`3.3`进行配置
    3.1. **勾选**`使用 OpenList 提供的参数`。
-   3.2. `客户端ID（ClientID/AppID）`和`应用秘钥 (AppKey/Secret)`均**留空**
+   3.2. `客户端ID（ClientID/AppID）`和`应用密钥 (AppKey/Secret)`均**留空**
    3.3. 点击`获取Token`按钮。
 
 ![aliyun-open-02-01-d](/img/drivers/aliyun/aliyun-open-02-01-d.png#dark)
@@ -110,25 +110,25 @@ typeof fetch !== "undefined" && getLimit()
 5. 在`根文件夹 ID`中填写上面获取的根文件夹 ID，如果使用根目录，请填写`root`。见[配置说明/根文件夹 ID](#_3-2-1-根文件夹-id)。
 ![aliyun-open-05-l](/img/drivers/aliyun/aliyun-open-05-l.png#light)
 ![aliyun-open-05-d](/img/drivers/aliyun/aliyun-open-05-d.png#dark)
-5. 在刷新令牌中填写上面获取的刷新令牌（如未获取，请参考[准备接入](#_2-准备接入)）。
-6. 如果你使用的是 `OpenList （或者公益服务器/自建服务器）`提供的 OAuth 客户端 ID 和密钥，请按照`6.1`、`6.2`和`6.3`进行配置
-  6.1. **勾选**`Use online api`。
-  6.2. `客户端ID（ClientID/AppID）`和`应用秘钥 (AppKey/Secret)`均**留空**。
-  6.3. 在`Api url address`中填写 `https://api.oplist.org/alicloud/renewapi`，如果是`公益服务器/自建服务器`，请填写对应的服务器地址。
+6. 在刷新令牌中填写上面获取的刷新令牌（如未获取，请参考[准备接入](#_2-准备接入)）。
+7. 如果你使用的是 `OpenList （或者公益服务器/自建服务器）`提供的 OAuth 客户端 ID 和密钥，请按照`7.1`、`7.2`和`7.3`进行配置
+  7.1. **勾选**`Use online api`。
+  7.2. `客户端ID（ClientID/AppID）`和`应用密钥 (AppKey/Secret)`均**留空**。
+  7.3. 在`Api url address`中填写 `https://api.oplist.org/alicloud/renewapi`，如果是`公益服务器/自建服务器`，请填写对应的服务器地址。
 ![aliyun-open-06-l](/img/drivers/aliyun/aliyun-open-06-l.png#light)
 ![aliyun-open-06-d](/img/drivers/aliyun/aliyun-open-06-d.png#dark)
-7. 如果你使用的是自己创建的 OAuth 客户端 ID 和密钥，请按照`7.1`、`7.2`和`7.3`进行配置
-  7.1. **不要**勾选`Use online api`。
-  7.2. 在`客户端ID（ClientID/AppID）`中填写你的`AppId`，在`应用秘钥 (AppKey/Secret)`中填写你的`AppSecret`。见[配置说明/客户端 ID，秘钥](#_3-2-2-客户端-id-秘钥)。
-  7.3. `Api url address`留空
+8. 如果你使用的是自己创建的 OAuth 客户端 ID 和密钥，请按照`8.1`、`8.2`和`8.3`进行配置
+  8.1. **不要**勾选`Use online api`。
+  8.2. 在`客户端ID（ClientID/AppID）`中填写你的`AppId`，在`应用密钥 (AppKey/Secret)`中填写你的`AppSecret`。见[配置说明/客户端 ID，密钥](#_3-2-2-客户端-id-密钥)。
+  8.3. `Api url address`留空
 ![aliyun-open-07-l](/img/drivers/aliyun/aliyun-open-07-l.png#light)
 ![aliyun-open-07-d](/img/drivers/aliyun/aliyun-open-07-d.png#dark)
-8. 在`秒传`选项中，选择是否启用秒传功能（可选）。 见[配置说明/秒传](#_3-2-3-秒传)。
-9. 在`移除方式`中，选择删除文件的方式（可选），默认是回收站。见[配置说明/移除方式](#_3-2-4-移除方式)。
-10. 在`云盘类型`中，选择云盘类型（可选），默认是`默认`类型。见[配置说明/云盘类型](#_3-2-5-云盘类型)。
-11. 在`Livp 下载格式`中，选择下载实况照片的格式（可选），默认是`Jpeg`。见[配置说明/Livp 下载格式](#_3-2-6-livp-下载格式)。
-12. 在`内部上传`中，选择是否启用内部上传（可选），默认是关闭。见[配置说明/内部上传](#_3-2-7-内部上传)。
-13. 点击`添加`按钮，完成阿里云盘的添加。
+9. 在`秒传`选项中，选择是否启用秒传功能（可选）。 见[配置说明/秒传](#_3-2-3-秒传)。
+10. 在`移除方式`中，选择删除文件的方式（可选），默认是回收站。见[配置说明/移除方式](#_3-2-4-移除方式)。
+11. 在`云盘类型`中，选择云盘类型（可选），默认是`默认`类型。见[配置说明/云盘类型](#_3-2-5-云盘类型)。
+12. 在`Livp 下载格式`中，选择下载实况照片的格式（可选），默认是`Jpeg`。见[配置说明/Livp 下载格式](#_3-2-6-livp-下载格式)。
+13. 在`内部上传`中，选择是否启用内部上传（可选），默认是关闭。见[配置说明/内部上传](#_3-2-7-内部上传)。
+14. 点击`添加`按钮，完成阿里云盘的添加。
 
 ### 3.2.配置说明
 #### 3.2.1.**根文件夹 ID**
@@ -146,11 +146,11 @@ typeof fetch !== "undefined" && getLimit()
 
 
 
-#### 3.2.2.**客户端 ID，秘钥**
+#### 3.2.2.**客户端 ID，密钥**
 
 正常用户不需要填写为空即可，如果自己申请了官方授权也可以使用自己的进行填写，为空时默认使用 OpenList 提供的。
 
-- 如果使用自己的开发者帐号，Oauth令牌链接也要修改，同时也要使用自己开发者帐号ID和秘钥获取刷新令牌
+- 如果使用自己的开发者帐号，Oauth令牌链接也要修改，同时也要使用自己开发者帐号ID和密钥获取刷新令牌
 
 <br/>
 
