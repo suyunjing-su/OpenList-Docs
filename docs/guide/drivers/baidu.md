@@ -29,18 +29,20 @@ Or use the proxy function in this program to transfer.
 :::
 
 ## **Refresh token**
-[Click here](https://api.oplist.org/) to obtain a refresh token.  
-If you have Baidu Netdisk developer permissions, please select "Baidu Netdisk Verify Login" and enter the callback address provided by this page in the Baidu Netdisk developer application backend. After clicking to get the token, you will automatically obtain the refresh token. Then, configure your own `client_id` and `client_secret` in Openlist.
-![](/img/drivers/baidu/dev_token.png)
+**Currently, there are three methods to obtain a Baidu Netdisk refresh token:**
 
-If you do not have Baidu Netdisk developer permissions, please select "Baidu Netdisk OOB Verification". By default, the client parameters of ES File Explorer are used for configuration, but you can also use your own `client_id` and `client_secret` parameters. After clicking to get the token, please wait patiently for the Baidu login page to appear. After logging in and authorizing, copy the authorization code, return to the original page, and follow the instructions to obtain the refresh token. Enter your `client_id` and `client_secret` in the Openlist storage configuration interface to use.
-![](/img/drivers/baidu/crack_dev_token.png)
+- All methods require you to [click here](https://api.oplist.org/) to obtain the refresh token. The **first method** requires developer permissions, while the **latter two** do not.
 
-The built-in API call implementation uses the server as a proxy to refresh the access_token. This feature is now online. Check the option to use the parameters provided by Openlist, click to get the token, and you will obtain the refresh token. In the Openlist storage configuration interface, enable the "use online API" option, enter the refresh token, and you can use it.
-![](/img/drivers/baidu/non_dev_token.png)
+  - **1.** If you have Baidu Netdisk developer permissions, please select **"Baidu Netdisk Auth Login"**, and in the Baidu Netdisk developer app backend, set the callback URL to the one provided on the webpage. After clicking "Get Token," you will automatically receive a refresh token. You can then configure your own `client_id` and `client_secret` in Openlist.  
+  ![](/img/drivers/baidu/dev_token.png)
 
-The principle of the online API can be roughly explained by the diagram
-![](/img/drivers/baidu/openapi.png)
+  - **2.** This method uses a built-in API call via our intermediary server to refresh the access token. It is already available online. Simply check the option to use the parameters provided by Openlist, click "Get Token," and you will receive a refresh token. In the storage configuration page of Openlist, enable the "Use Online API" option, and enter the refresh token to start using it.  
+  ![](/img/drivers/baidu/non_dev_token.png)  
+  The basic principle of the online API is illustrated in the diagram below:  
+  ![](/img/drivers/baidu/openapi.png)
+
+  - **3.** If you do not have Baidu Netdisk developer permissions but somehow have access to an app’s `client_id` and `client_secret`, please select **"Baidu Netdisk OOB Authentication"**. By default, this method uses the client parameters from the "ES File Explorer" app, but you can also input your own `client_id` and `client_secret`. After clicking "Get Token," wait patiently as you are redirected to the Baidu authorization page. Log in and authorize the app, then copy the authorization code and return to the original webpage to input the code as instructed to obtain the refresh token. In the storage configuration page of Openlist, fill in the `client_id` and `client_secret` to start using the service.  
+  ![](/img/drivers/baidu/crack_dev_token.png)
 
 
 

@@ -71,17 +71,19 @@ flowchart TB
 :::
 
 ## **刷新令牌**
+- **目前你有三种方法获取百度网盘的刷新令牌**
+- 全部都要[点击这里](https://api.oplist.org/) 来获取刷新令牌。第一种需要开发者权限，后**两种**不需要。
+  - **1**、如果你有百度网盘开发者权限，请选择“百度网盘 验证登录”，并在百度网盘开发者应用后台里填入配置回调地址为该网页提供的回调地址。点击获取token后即可自动获取刷新令牌，并在openlist中配置您自己的cilent_id和cilent_secret。
+  ![](/img/drivers/baidu/dev_token.png)
+  
+  - **2**、内置API调用的实现方式，利用我们建立的服务器中转刷新access_token，目前已经上线，勾选使用Openlist提供的参数，点击获取token即可获得刷新令牌。在Openlist的存储配置界面，打开使用online api选项，经刷新令牌填入即可使用。
+  ![](/img/drivers/baidu/non_dev_token.png)
+  对于online api的原理，大体可以由下图说明：
+  ![](/img/drivers/baidu/openapi.png)
 
-[点击这里](https://api.oplist.org/) 来获取刷新令牌。
-如果你有百度网盘开发者权限，请选择“百度网盘 验证登录”，并在百度网盘开发者应用后台里填入配置回调地址为该网页提供的回调地址。点击获取token后即可自动获取刷新令牌，并在openlist中配置您自己的cilent_id和cilent_secret。
-![](/img/drivers/baidu/dev_token.png)
-如果你没有百度网盘开发权限，请选择“百度网盘 OOB验证”，目前默认使用es文件浏览器的客户端参数进行配置，您也可以选择使用自己的获取到的cilent_id和cilent_secret参数，点击获取token后耐心等待跳转百度页面，登录授权后复制授权码，回到原网页按照提示即可获取刷新令牌。在Openlist的存储配置界面将cilent_id和cilent_secret填入即可使用。
-![](/img/drivers/baidu/crack_dev_token.png)
-内置API调用的实现方式为服务器中转刷新access_token，目前已经上线，勾选使用Openlist提供的参数，点击获取token即可获得刷新令牌。在Openlist的存储配置界面，打开使用online api选项，经刷新令牌填入即可使用。
-![](/img/drivers/baidu/non_dev_token.png)
-对于online api的原理，大体可以由下图说明：
-![](/img/drivers/baidu/openapi.png)
-
+  - **3**、如果你没有百度网盘开发权限，但是你又莫名其妙的掌握有某个APP的id和secret，请选择“百度网盘 OOB验证”，目前默认使用es文件浏览器的客户端参数进行配置，您也可以选择使用自己的获取到的cilent_id和cilent_secret参数，点击获取token后耐心等待跳转百度页面，登录授权后复制授权码，回到原网页按照提示即可获取刷新令牌。在Openlist的存储配置界面将cilent_id和cilent_secret填入即可使用。
+  ![](/img/drivers/baidu/crack_dev_token.png)
+ 
 
 
 ## **根文件夹ID**
