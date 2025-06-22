@@ -1,0 +1,1 @@
+const s="/OpenList-Docs/img/drivers/onedrive-register-app.png",e="/OpenList-Docs/img/drivers/onedrive-new-password.png",i="/OpenList-Docs/img/drivers/onedrive-update-permission.png",r="/OpenList-Docs/img/drivers/onedrive_app/od_share_add.png";export{s as _,e as a,i as b,r as c};
