@@ -13,6 +13,12 @@ actions:
   - text: Github🌱
     link: https://github.com/OpenListTeam/OpenList
 
+  - text: 隐私政策
+    link: https://docs.openlist.team/privacy
+
+  - text: 使用条款
+    link: https://docs.openlist.team/terms
+
 features:
   - title: 使用简单
     icon: iconfont icon-light
