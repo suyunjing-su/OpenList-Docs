@@ -24,6 +24,9 @@ Dropbox官网：https://www.dropbox.com/
 
 
 ## **获取刷新令牌**
+- **该网盘并不支持由OpenList提供的online api模式**
+  以下教程适用于保持如框内所示的关闭状态
+  ![关闭online_api](/img/drivers/dropbox/7.png)
   - 获取方式如下
   - 自建`客户端ID`和`秘钥`时，记得授权
   - 首先[点击这里](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps)进入dropbox的应用管理界面，点击创建应用
