@@ -24,8 +24,10 @@ Dropbox Official：https://www.dropbox.com/
 
 
 ## **Get refresh token**
-
-- The steps are as follows:
+- **This cloud drive does not support the online API mode provided by OpenList.**  
+  - The following tutorial applies when the option is kept disabled as shown below.  
+  ![Disable online_api](/img/drivers/dropbox/7.png)
+  - The steps are as follows:
   - If you create your own `Client ID` and `Secret`, remember to authorize them.
   - First, [click here](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps) to enter the Dropbox app management page and click "Create App".
   ![Enter the page](/img/drivers/dropbox/1.png)
