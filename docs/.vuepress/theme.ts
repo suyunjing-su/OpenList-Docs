@@ -37,6 +37,7 @@ export default hopeTheme(
       },
     },
     markdown: {
+      spoiler: true,
       imgMark: true,
       imgLazyload: true,
       tabs: true,
@@ -48,6 +49,7 @@ export default hopeTheme(
       sup: true,
       flowchart: true,
       mermaid: true,
+      echarts: true,
       codeTabs: true,
     },
     plugins: {
