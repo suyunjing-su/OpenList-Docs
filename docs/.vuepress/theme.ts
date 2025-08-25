@@ -114,21 +114,11 @@ export default hopeTheme(
         {
           path: "/zh",
           title: '温馨提示',
-          content: '<i class="fa-solid fa-light-emergency-on fa-bounce" style="color: #ff0000;"></i>&nbsp;<span style="color:rgb(255, 0, 0);font-weight:bold;">请仔细查看弹窗提示内容</span><br/><br/>TOP.<span style="color:red; font-weight:bold;">正在使用 beta 预构建产物的用户，如 Docker Image、前端预构建包等，或执行自构建的用户，请尽快拉取最新版本（前端版本 v4.0.0-rc.4 及以上），有重要更新！</span><br/><br/>0.<span style="color:red; font-weight:bold;">OpenList 正在紧锣密鼓筹备首个 Release，请关注我们！</span><br/><br/>1.OpenList v3.30.0 版本开始将不再支持Win7/Server2008，因为Go不支持了,<a href="https://github.com/golang/go/issues/64622">点击查看详细说明</a>.<br/><br/><span style="color:rgb(255, 0, 0);font-weight:bold;">2.添加云盘后请及时配置[防盗/元信息]等措施，防止被[爬虫/其他人]恶意[访问/分享]导致帐号被[冻结/禁用].</span></span>',
+          content: '本文档已经不再进行维护，请转移至最新文档作为配置参考。',
           actions: [
             {
-              text: "阿里云open",
-              link: "/zh/guide/drivers/aliyundrive_open",
-              type: "primary",
-            },
-            {
-              text: "GitHub",
-              link: "https://github.com/OpenListTeam/OpenList",
-              type: "primary",
-            },
-            {
-              text: "配置",
-              link: "/zh/config/configuration",
+              text: "最新文档",
+              link: "https://doc.oplist.org/",
               type: "primary",
             },
           ],
