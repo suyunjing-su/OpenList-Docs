@@ -91,21 +91,11 @@ export default hopeTheme(
         {
           path: "/",
           title: 'Kind tips',
-          content: '<i class="fa-solid fa-light-emergency-on fa-bounce" style="color: #ff0000;"></i>&nbsp;<span style="color:rgb(255, 0, 0);font-weight:bold;">Please check the reminder content carefully</span><br/><br/>TOP.<span style="color:red; font-weight:bold;">For users using beta release, including the docker image, the pre-built frontend dists, etc, please update them to the latest beta build!</span><br/><br/>0.<span style="color:red; font-weight:bold;">We are working hard to prepare OpenList\'s first release, please stay tuned!</span><br/><br/>1. OpenList v3.30.0 will no longer support Win7/Server2008 because Go does not support it. <a href="https://github.com/golang/go/issues/64622">Click to view detailed instructions</a> .<br/><br/><span style="color:rgb(255, 0, 0);font-weight:bold;">2.After adding the cloud disk, please configure [anti-theft/meta information] and other measures in time to prevent the account from being [frozen/disabled] due to malicious [access/sharing] by [crawlers/others].</span></span>',
+          content: 'This document is no longer maintained. Please refer to the latest documentation for configuration.',
           actions: [
             {
-              text: "Aliyun open",
-              link: "/guide/drivers/aliyundrive_open",
-              type: "primary",
-            },
-            {
-              text: "GitHub",
-              link: "https://github.com/OpenListTeam/OpenList/discussions/4572",
-              type: "primary",
-            },
-            {
-              text: "Config",
-              link: "/config/configuration",
+              text: "Latest Docs",
+              link: "https://doc.oplist.org/",
               type: "primary",
             },
           ],
